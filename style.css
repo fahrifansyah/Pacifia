@@ -1,0 +1,214 @@
+*{
+    font-family: "Montserrat";
+}
+.navbar-full {
+    background-color:antiquewhite;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    animation: munculhilang 1s;
+    
+}
+
+@keyframes munculhilang {
+    0% {
+        transform: scale(0);
+        filter: opacity(0);
+    }
+    25% {
+        transform: scale(0.25);
+        filter: opacity(0.25);
+    }
+    50% {
+        transform: scale(0.5);
+        filter: opacity(0.5);
+    }
+    75% {
+        transform: scale(0.75);
+        filter: opacity(0.75);
+    }
+    100% {
+        transform: scale(1);
+        filter: opacity(1);
+    }
+}
+
+
+
+.nav-kiri{
+    animation: bounceIn 3s infinite;
+}
+
+.nav-kanan{
+    animation: bounceIn 3s infinite;
+}
+
+.logo{
+    margin-left: 100px;
+    height: 50px;
+    animation: bounceIn 2s infinite;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-5px);
+    }
+    35% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+        transform: translateY(-5px);
+    }
+}
+
+
+.tombol-kontak{
+    background-color: red;
+    border: none;
+    border-radius: 0px 16px 0px 16px;
+}
+
+.seksisatu{
+    background-color: antiquewhite;
+    padding-bottom: 120px;
+}
+
+.kiri-seksisatu{
+    margin-top: 200px;
+    width: 32%;
+}
+
+.kiri-seksisatu h1 {
+    font-weight: 900;
+    font-size: 46px;
+}
+
+.kiri-seksisatu p {
+    font-weight: 700;
+}
+
+.gambar-seksisatu img{
+    margin-top: 60px;
+    transform: translateY(120px);
+    width: 30rem;
+    animation: 2s fadeInAnimation reverse;
+    animation-delay:0s;
+    animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+}
+
+@keyframes fadeInAnimation {
+    0% { 
+            clip-path: circle(75%); 
+    }
+  100% { 
+        clip-path: circle(0%); 
+    }
+}
+
+.gambar-seksisatu:hover{
+    animation: bounceIn 1s infinite ;
+
+}
+
+.tombol-price{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 16px 0px 16px 0px;
+}
+
+.slide-gambar{
+    padding: 0px 150px 50px 150px ;
+    height: 20%;
+}
+
+.atas-seksidua h1{
+    font-weight: 900;
+}
+
+.faq{
+    background-color:antiquewhite;
+    height: 41rem
+}
+
+.faq-head{
+    font-weight: 900;
+    font-size: 46px;
+    padding-top: 30px;
+}
+
+.full-faq{
+    padding: 30px;
+}
+
+.faq-konten-bawah{
+    margin: 0px 64px;
+    column-gap: 20px;
+}
+
+.faq-accordion{
+    width: 50%;
+    height: fit-content;
+    margin-top: 140px;
+    border: 2px dashed red;
+   
+}
+
+.footer-konten h1 {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+@media only screen and (max-width: 826px){
+    .navbar-full{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        margin: 15px;
+        margin-left: 55px;
+    }
+    .seksisatu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .kiri-seksisatu{
+        text-align: center;
+        width: fit-content;
+    }
+    .button-kiri-seksisatu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .faq{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .faq-konten-bawah{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        transform: translateY(-100px);
+    }
+    footer{
+        column-gap: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .footer-konten > h1{
+        font-size: 24px;
+    }
+    .footer-konten > p {
+        font-size: 16px;
+    }
+}
